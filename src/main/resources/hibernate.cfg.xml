@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- for MySql <property name="connection.url">jdbc:mysql://localhost:3306/gr</property> 
+			<property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
+			<property name="connection.username">root</property> <property name="connection.password">1111</property> 
+			<property name="dialect">org.hibernate.dialect.MySQLDialect</property> <property 
+			name="show_sql">false</property> <property name="hbm2ddl.auto">update</property> -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/gr</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">admin</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">false</property>
+
+		<!--<mapping resource="user.cfg.xml" /> -->
+		<mapping class="appp.Groups" />
+		<mapping class="appp.Stud" />
+	</session-factory>
+</hibernate-configuration>
